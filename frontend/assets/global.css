@@ -1,0 +1,113 @@
+/* =========================================================
+   UMBRIS DESIGN SYSTEM
+   REM/EM RESPONSIVE VERSION
+   ========================================================= */
+
+/* =========================================================
+   ROOT VARIABLES
+   ========================================================= */
+
+:root {
+  /* =========================
+     CORE PALETTE
+     ========================= */
+
+  --obsidian-black: #0b0d10;
+  --gunmetal-gray: #1c2228;
+  --titanium-silver: #aeb7c2;
+  --deep-crimson: #7a1116;
+
+  /* =========================
+     EXTENDED PALETTE
+     ========================= */
+
+  --surface-elevated: #242c34;
+  --surface-overlay: rgba(0, 0, 0, 0.72);
+
+  --text-primary: #d6dce2;
+  --text-secondary: #aeb7c2;
+  --text-muted: #7e8894;
+  --text-disabled: #5f6873;
+
+  --accent-primary: #7a1116;
+  --accent-hover: #99161d;
+  --accent-active: #b81d24;
+
+  --border-primary: rgba(255, 255, 255, 0.06);
+  --border-secondary: rgba(255, 255, 255, 0.12);
+
+  --success: #1f7a5c;
+  --warning: #b78628;
+  --danger: #a83232;
+  --info: #2e5b9a;
+
+  /* =========================
+     TYPOGRAPHY
+     ========================= */
+
+  --font-primary: "Inter", "IBM Plex Sans", "Segoe UI", sans-serif;
+
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* =========================
+     FONT SCALE
+     1rem = 16px
+     ========================= */
+
+  --text-display: 4rem; /* 64px */
+  --text-h1: 3rem; /* 48px */
+  --text-h2: 2.25rem; /* 36px */
+  --text-h3: 1.75rem; /* 28px */
+  --text-body-lg: 1.125rem; /* 18px */
+  --text-body: 1rem; /* 16px */
+  --text-caption: 0.875rem; /* 14px */
+  --text-micro: 0.75rem; /* 12px */
+
+  /* =========================
+     SPACING SYSTEM
+     ========================= */
+
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem; /* 8px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 1.5rem; /* 24px */
+  --space-xl: 2rem; /* 32px */
+  --space-2xl: 3rem; /* 48px */
+  --space-3xl: 4rem; /* 64px */
+
+  /* =========================
+     BORDER RADIUS
+     ========================= */
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* =========================
+     SHADOWS
+     ========================= */
+
+  --shadow-card: 0 0.5rem 2rem rgba(0, 0, 0, 0.35);
+
+  --shadow-elevated: 0 0.75rem 3rem rgba(0, 0, 0, 0.5);
+
+  /* =========================
+     TRANSITIONS
+     ========================= */
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+
+  /* =========================
+     MAX WIDTHS
+     ========================= */
+
+  --container-max-width: 90rem; /* 1440px */
+
+  /* =========================
+     NAVBAR
+     ========================= */
+
+  --navbar-height: 4.5rem;
+}

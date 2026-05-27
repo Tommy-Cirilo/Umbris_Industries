@@ -1,0 +1,621 @@
+:root {
+  --obsidian-black: #0b0d10;
+  --gunmetal-gray: #1c2228;
+  --text-primary: #d6dce2;
+  --text-secondary: #aeb7c2;
+  --border-primary: rgba(255, 255, 255, 0.06);
+  --accent-primary: #7a1116;
+  --accent-hover: #99161d;
+}
+
+body {
+  background: var(--obsidian-black);
+
+  color: var(--text-primary);
+
+  font-family: Inter, sans-serif;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.umbris-navbar {
+ position: fixed;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  border-bottom: 1px solid var(--border-primary);
+
+  backdrop-filter: blur(12px);
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(4, 6, 8, 0.96) 0%,
+      rgba(6, 8, 12, 0.92) 28%,
+      rgba(8, 10, 14, 0.88) 55%,
+      rgba(4, 6, 8, 0.94) 100%
+    );
+}
+
+.umbris-navbar::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 68% 50%,
+      rgba(122, 17, 22, 0.12),
+      transparent 28%
+    );
+
+  opacity: 0.8;
+}
+
+.umbris-navbar::before {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+
+  top: 50%;
+
+  width: 28%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    rgba(122, 17, 22, 0.18),
+    transparent
+  );
+
+  transform: translateY(-50%);
+}
+
+.brand {
+  letter-spacing: 0.18em;
+
+  font-weight: 700;
+}
+
+/* =========================================
+   NAVBAR LAYOUT
+========================================= */
+
+.nav-container {
+  width: 100%;
+
+  padding: 1.35rem 3.5rem;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+}
+
+.nav-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4rem;
+}
+
+
+.nav-center {
+  display: flex;
+
+  align-items: center;
+
+  gap: 3rem;
+
+  margin-left: auto;
+
+  margin-right: 3rem;
+}
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.85rem;
+
+  text-decoration: none;
+
+  color: white;
+}
+
+.brand:hover {
+  color: white;
+}
+
+/* =========================================
+   ECLIPSE LOGO
+========================================= */
+
+.eclipse-logo {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  position: relative;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+}
+
+.eclipse-logo::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -2px;
+
+  border-radius: 50%;
+
+  border-top: 3px solid var(--accent-primary);
+
+  border-right: 3px solid var(--accent-primary);
+
+  transform: rotate(35deg);
+
+  filter: drop-shadow(0 0 8px rgba(122, 17, 22, 0.8));
+}
+
+/* =========================================
+   BRAND TEXT
+========================================= */
+
+.brand-text {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.brand-main {
+  font-size: 1.2rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.32em;
+
+  color: white;
+}
+
+.brand-sub {
+  font-size: 0.58rem;
+
+  letter-spacing: 0.35em;
+
+  color: var(--text-secondary);
+}
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.nav-links {
+  display: flex;
+
+  gap: 2rem;
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+
+  text-decoration: none;
+
+  font-size: 1rem;
+
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: white;
+}
+
+/* =========================================
+   NAV BUTTON
+========================================= */
+
+.nav-button {
+  text-decoration: none;
+
+  border: 1px solid rgba(122, 17, 22, 0.5);
+
+  color: var(--text-secondary);;
+
+  padding: 0.85rem 1.4rem;
+
+  transition: 0.25s ease;
+
+  margin-left: 3rem;
+}
+
+.nav-button:hover,
+.nav-button:focus-visible {
+  background: var(--accent-primary);
+
+  box-shadow: 0 0 18px rgba(122, 17, 22, 0.35);
+
+  color: white;
+}
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.menu-toggle {
+  display: none;
+
+  background: none;
+
+  border: none;
+
+  color: white;
+
+  font-size: 1.5rem;
+}
+
+/* =========================================
+   RESPONSIVE NAVBAR
+========================================= */
+
+@media (max-width: 980px) {
+  .nav-links,
+  .nav-button {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-container {
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+            90deg,
+            rgba(5, 7, 10, 0.96) 0%,
+            rgba(5, 7, 10, 0.92) 22%,
+            rgba(5, 7, 10, 0.72) 42%,
+            rgba(5, 7, 10, 0.28) 70%,
+            rgba(5, 7, 10, 0.12) 100%
+        ),
+    url("../assets/red-eclipse.png");
+
+  background-size: cover;
+
+  background-position: center right;
+
+  background-repeat: no-repeat;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    right: -12rem;
+
+    top: 8rem;
+
+    width: 34rem;
+
+    height: 34rem;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(122, 17, 22, 0.42) 0%,
+            rgba(122, 17, 22, 0.12) 45%,
+            transparent 72%
+        );
+
+    filter: blur(4rem);
+
+    pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 50rem;
+
+  margin-left: 0;
+
+  padding-left: 4rem;
+}
+
+.hero-eyebrow {
+  color: var(--text-secondary);
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  font-size: 0.8rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: clamp(5rem, 5vw, 6rem);
+
+  font-weight: 525;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.06em;
+
+  /* max-width: 8ch; */
+}
+
+.hero-text {
+  margin-top: 2rem;
+
+  max-width: 38rem;
+
+  color: var(--text-secondary);
+
+  font-size: 1.1rem;
+}
+
+.hero-actions {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-top: 3rem;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn-primary-custom {
+  background: var(--accent-primary);
+
+  color: white;
+
+  padding: 0.9rem 1.6rem;
+
+  border-radius: 0;
+
+  border: none;
+}
+
+.btn-primary-custom:hover {
+  background: var(--accent-hover);
+
+  color: white;
+}
+
+.btn-outline-custom {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  padding: 0.9rem 1.6rem;
+
+  border-radius: 0;
+}
+
+.btn-outline-custom:hover {
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+}
+
+/* =========================================
+   FEATURE STRIP
+========================================= */
+
+.feature-strip {
+  border-top: 1px solid var(--border-primary);
+
+  border-bottom: 1px solid var(--border-primary);
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.feature-item {
+  display: flex;
+
+  gap: 1rem;
+
+  padding: 2rem;
+
+  min-height: 140px;
+
+  border-right: 1px solid var(--border-primary);
+}
+
+.feature-icon {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  flex-shrink: 0;
+}
+
+.feature-icon-real {
+  font-size: 2rem;
+
+  color: white;
+
+  flex-shrink: 0;
+}
+
+.icon-color {
+  width: 2.5rem;
+
+  height: 2.5rem;
+
+  display: block;
+}
+
+.feature-title {
+  font-size: 0.85rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+
+  margin: 0;
+}
+
+.feature-text {
+  margin-top: 0.5rem;
+
+  color: var(--text-secondary);
+
+  font-size: 0.85rem;
+}
+
+/* =========================================
+   SECOND SECTION
+========================================= */
+
+.integrity-section {
+  background: #0d1014;
+}
+
+.integrity-content {
+  display: flex;
+
+  align-items: center;
+
+  min-height: 700px;
+
+  padding: 5rem;
+}
+
+.integrity-title {
+  font-size: 3rem;
+
+  line-height: 1.05;
+
+  max-width: 10ch;
+}
+
+.integrity-text {
+  margin: 2rem 0;
+}
+
+.integrity-image {
+  min-height: 700px;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.45)),
+    url("../assets/building.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  padding: 3rem 0;
+
+  border-top: 1px solid var(--border-primary);
+}
+
+.footer-text {
+  color: var(--text-secondary);
+
+  margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+  .feature-item {
+    border-bottom: 1px solid var(--border-primary);
+  }
+
+  .integrity-content {
+    min-height: auto;
+  }
+
+  .integrity-image {
+    min-height: 450px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .integrity-content {
+    padding: 3rem 2rem;
+  }
+}
