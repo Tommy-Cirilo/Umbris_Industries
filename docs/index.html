@@ -18,7 +18,7 @@
   <body>
     <!-- =========================================
          NAVBAR
-    ========================================== -->
+    ========================================== --> 
     <nav class="umbris-navbar">
       <div class="nav-container">
         <!-- LEFT CLUSTER -->
@@ -42,7 +42,19 @@
         </div>
 
         <!-- RIGHT -->
-        <a href="#" class="nav-button"> Request a Consultation </a>
+         <form action="https://formsubmit.co/tommy.cirilo@umbris.net" method="POST">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" placeholder="john.doe@test.com" required>
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" placeholder="John">
+          <label for="last_name">Last Name</label>
+          <input type="text" name="last_name" placeholder="John">
+          <label for="phone_number">Phone Number</label>
+          <input type="number" name="phone_number" placeholder="John">
+          <textarea name="project" placeholder="Tell us about your project!" rows="5"></textarea>
+          <button type="submit" class="nav-button">Request a Consultation </button>
+         </form>
+        <!-- <a href="#" class="nav-button"> Request a Consultation </a> -->
       </div>
     </nav>
 
