@@ -1804,3 +1804,589 @@ textarea:focus-visible {
     right: -17rem;
   }
 }
+
+/* =========================================================
+   CAPABILITIES PAGE
+   ========================================================= */
+
+/* =========================================================
+   CAPABILITIES HERO
+   ========================================================= */
+
+.capabilities-hero {
+  min-height: 46rem;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.capabilities-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 7, 10, 0.97) 0%,
+      rgba(5, 7, 10, 0.92) 30%,
+      rgba(5, 7, 10, 0.66) 56%,
+      rgba(5, 7, 10, 0.28) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(5, 7, 10, 0.62),
+      transparent 45%
+    );
+}
+
+/* =========================================================
+   CAPABILITY NAVIGATION
+   ========================================================= */
+
+.capability-navigation .row > .col {
+  display: flex;
+}
+
+.capability-feature {
+  width: 100%;
+
+  color: var(--text-primary);
+
+  text-decoration: none;
+}
+
+.capability-feature:hover,
+.capability-feature:focus-visible {
+  color: white;
+
+  background: rgba(122, 17, 22, 0.12);
+}
+
+.capability-feature .feature-icon-real {
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.capability-feature:hover .feature-icon-real,
+.capability-feature:focus-visible .feature-icon-real {
+  color: #e67379;
+
+  transform: translateY(-0.1875rem);
+}
+
+/* =========================================================
+   CAPABILITIES INTRODUCTION
+   ========================================================= */
+
+.capabilities-intro {
+  padding-block: clamp(5rem, 9vw, 8rem);
+
+  border-bottom: 0.0625rem solid var(--border-primary);
+
+  background:
+    radial-gradient(
+      circle at 14% 22%,
+      rgba(122, 17, 22, 0.14),
+      transparent 27rem
+    ),
+    var(--obsidian-black);
+}
+
+.capabilities-intro-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(20rem, 0.85fr);
+
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: start;
+}
+
+.capabilities-intro h2 {
+  max-width: 13ch;
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  font-weight: 525;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.capabilities-intro-copy {
+  max-width: 42rem;
+
+  color: var(--text-secondary);
+
+  font-size: var(--text-body-lg);
+}
+
+.capabilities-intro-copy p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.capabilities-intro-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   CAPABILITY DETAILS
+   ========================================================= */
+
+.capability-details {
+  border-top: 0.0625rem solid var(--border-primary);
+
+  background: #0d1014;
+}
+
+.capability-detail {
+  display: grid;
+  grid-template-columns:
+    minmax(22rem, 0.85fr)
+    minmax(0, 1.15fr);
+
+  min-height: 36rem;
+
+  scroll-margin-top: 6rem;
+
+  border-bottom: 0.0625rem solid var(--border-primary);
+}
+
+.capability-detail:nth-child(even) {
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(22rem, 0.85fr);
+}
+
+.capability-detail:nth-child(even) .capability-detail-heading {
+  grid-column: 2;
+  grid-row: 1;
+
+  border-right: 0;
+  border-left: 0.0625rem solid var(--border-primary);
+}
+
+.capability-detail:nth-child(even) .capability-detail-body {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* =========================================================
+   CAPABILITY HEADING PANEL
+   ========================================================= */
+
+.capability-detail-heading {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 36rem;
+  padding: clamp(3rem, 6vw, 6rem);
+
+  overflow: hidden;
+
+  border-right: 0.0625rem solid var(--border-primary);
+
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(122, 17, 22, 0.28),
+      transparent 20rem
+    ),
+    linear-gradient(
+      145deg,
+      #222a32 0%,
+      #151a20 55%,
+      #0d1014 100%
+    );
+}
+
+.capability-detail-heading::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: -9rem;
+
+  width: 24rem;
+  height: 24rem;
+
+  border: 0.0625rem solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+}
+
+.capability-detail-heading::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: -5rem;
+
+  width: 17rem;
+  height: 17rem;
+
+  border:
+    0.1875rem solid
+    rgba(122, 17, 22, 0.45);
+
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+
+  border-radius: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(35deg);
+
+  filter:
+    drop-shadow(
+      0 0 1.5rem rgba(122, 17, 22, 0.28)
+    );
+}
+
+.capability-detail-heading > i {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 3rem;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: clamp(3.5rem, 6vw, 5rem);
+}
+
+.capability-detail-heading > div {
+  position: relative;
+  z-index: 2;
+}
+
+.capability-detail-heading h2 {
+  max-width: 13ch;
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(2.25rem, 3.7vw, 3.5rem);
+  font-weight: 525;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.capability-detail-number {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+
+  color: #e67379;
+
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   CAPABILITY BODY
+   ========================================================= */
+
+.capability-detail-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    clamp(4rem, 7vw, 7rem)
+    clamp(2rem, 6vw, 6rem);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.02),
+      transparent 65%
+    ),
+    #0d1014;
+}
+
+.capability-detail-body > p {
+  max-width: 47rem;
+  margin: 0 0 3rem;
+
+  color: var(--text-secondary);
+
+  font-size: var(--text-body-lg);
+}
+
+.capability-detail-body h3 {
+  margin: 0 0 1.25rem;
+
+  color: white;
+
+  font-size: var(--text-caption);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   CAPABILITY SERVICE LIST
+   ========================================================= */
+
+.capability-service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 0;
+
+  max-width: 52rem;
+  margin: 0;
+  padding: 0;
+
+  border-top: 0.0625rem solid var(--border-secondary);
+
+  list-style: none;
+}
+
+.capability-service-list li {
+  position: relative;
+
+  min-height: 4.5rem;
+  padding:
+    1.25rem
+    1.25rem
+    1.25rem
+    2rem;
+
+  border-right: 0.0625rem solid var(--border-secondary);
+  border-bottom: 0.0625rem solid var(--border-secondary);
+
+  color: var(--text-primary);
+}
+
+.capability-service-list li:nth-child(even) {
+  border-right: 0;
+}
+
+.capability-service-list li::before {
+  content: "";
+
+  position: absolute;
+  top: 1.8rem;
+  left: 0.5rem;
+
+  width: 0.45rem;
+  height: 0.45rem;
+
+  border-radius: 50%;
+
+  background: var(--accent-active);
+
+  box-shadow:
+    0 0 0.75rem
+    rgba(184, 29, 36, 0.5);
+}
+
+/* =========================================================
+   CAPABILITY PANEL VARIATIONS
+   ========================================================= */
+
+#cyber-security .capability-detail-heading {
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(122, 17, 22, 0.3),
+      transparent 20rem
+    ),
+    linear-gradient(
+      145deg,
+      #1d252d 0%,
+      #11171d 55%,
+      #0b0e12 100%
+    );
+}
+
+#data-analytics .capability-detail-heading {
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(46, 91, 154, 0.2),
+      transparent 20rem
+    ),
+    linear-gradient(
+      145deg,
+      #202830 0%,
+      #141a20 55%,
+      #0d1014 100%
+    );
+}
+
+#cloud-solutions .capability-detail-heading {
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(174, 183, 194, 0.12),
+      transparent 20rem
+    ),
+    linear-gradient(
+      145deg,
+      #222a32 0%,
+      #151b21 55%,
+      #0d1014 100%
+    );
+}
+
+#software-engineering .capability-detail-heading {
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(122, 17, 22, 0.26),
+      transparent 20rem
+    ),
+    linear-gradient(
+      145deg,
+      #211f25 0%,
+      #15161b 55%,
+      #0d1014 100%
+    );
+}
+
+#accessibility .capability-detail-heading {
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(46, 91, 154, 0.18),
+      transparent 20rem
+    ),
+    linear-gradient(
+      145deg,
+      #20272d 0%,
+      #151a1f 55%,
+      #0d1014 100%
+    );
+}
+
+/* =========================================================
+   CAPABILITIES TABLET STYLES
+   ========================================================= */
+
+@media (max-width: 61.25rem) {
+  .capabilities-hero {
+    min-height: 40rem;
+  }
+
+  .capabilities-intro-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .capabilities-intro-copy {
+    max-width: 48rem;
+  }
+
+  .capability-detail,
+  .capability-detail:nth-child(even) {
+    grid-template-columns:
+      minmax(17rem, 0.75fr)
+      minmax(0, 1.25fr);
+  }
+
+  .capability-detail:nth-child(even)
+    .capability-detail-heading {
+    grid-column: 1;
+
+    border-right: 0.0625rem solid var(--border-primary);
+    border-left: 0;
+  }
+
+  .capability-detail:nth-child(even)
+    .capability-detail-body {
+    grid-column: 2;
+  }
+
+  .capability-detail-heading {
+    padding: 3rem 2.5rem;
+  }
+
+  .capability-detail-body {
+    padding: 4rem 2.5rem;
+  }
+
+  .capability-service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-service-list li,
+  .capability-service-list li:nth-child(even) {
+    border-right: 0;
+  }
+}
+
+/* =========================================================
+   CAPABILITIES MOBILE STYLES
+   ========================================================= */
+
+@media (max-width: 48rem) {
+  .capabilities-hero {
+    min-height: 36rem;
+
+    background-position: 62% center !important;
+  }
+
+  .capability-detail,
+  .capability-detail:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-detail .capability-detail-heading,
+  .capability-detail:nth-child(even)
+    .capability-detail-heading {
+    grid-column: 1;
+    grid-row: 1;
+
+    min-height: 24rem;
+    padding: 4rem 1.5rem 3rem;
+
+    border-right: 0;
+    border-bottom: 0.0625rem solid var(--border-primary);
+    border-left: 0;
+  }
+
+  .capability-detail .capability-detail-body,
+  .capability-detail:nth-child(even)
+    .capability-detail-body {
+    grid-column: 1;
+    grid-row: 2;
+
+    padding: 3.5rem 1.5rem;
+  }
+
+  .capability-detail-heading::before {
+    right: -13rem;
+  }
+
+  .capability-detail-heading::after {
+    right: -10rem;
+  }
+
+  .capability-detail-heading > i {
+    margin-bottom: 2rem;
+
+    font-size: 3.5rem;
+  }
+
+  .capability-service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-service-list li {
+    min-height: auto;
+  }
+}
