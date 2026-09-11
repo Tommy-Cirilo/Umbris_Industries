@@ -3625,3 +3625,335 @@ textarea:focus-visible {
     min-height: 22rem;
   }
 }
+
+/* =========================================================
+   THANK YOU PAGE
+   ========================================================= */
+
+.thank-you-page {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  background: var(--obsidian-black);
+}
+
+.thank-you-main {
+  display: flex;
+  flex: 1;
+}
+
+/* =========================================================
+   THANK YOU SECTION
+   ========================================================= */
+
+.thank-you-section {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 48rem;
+  padding:
+    clamp(9rem, 14vw, 12rem)
+    1.5rem
+    clamp(5rem, 9vw, 8rem);
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(122, 17, 22, 0.2),
+      transparent 28rem
+    ),
+    linear-gradient(
+      145deg,
+      #11161b 0%,
+      #0b0d10 62%,
+      #080a0d 100%
+    );
+}
+
+.thank-you-section::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+
+  width: 38rem;
+  height: 38rem;
+
+  border: 0.0625rem solid rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.thank-you-section::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+
+  width: 29rem;
+  height: 29rem;
+
+  border: 0.1875rem solid rgba(122, 17, 22, 0.32);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(35deg);
+
+  filter:
+    drop-shadow(
+      0 0 2rem rgba(122, 17, 22, 0.25)
+    );
+}
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+   ========================================================= */
+
+.thank-you-decoration {
+  position: absolute;
+  top: 15%;
+  right: -12rem;
+  z-index: -1;
+
+  width: 30rem;
+  height: 30rem;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(122, 17, 22, 0.2),
+      transparent 68%
+    );
+
+  filter: blur(2rem);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   THANK YOU CONTENT
+   ========================================================= */
+
+.thank-you-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 60rem);
+
+  padding: clamp(2.5rem, 6vw, 5rem);
+
+  border: 0.0625rem solid var(--border-secondary);
+
+  text-align: center;
+
+  background: rgba(11, 13, 16, 0.8);
+
+  box-shadow: var(--shadow-elevated);
+
+  backdrop-filter: blur(0.75rem);
+}
+
+.thank-you-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 2rem;
+
+  border: 0.125rem solid rgba(230, 115, 121, 0.5);
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 2.75rem;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(122, 17, 22, 0.55),
+      rgba(122, 17, 22, 0.18) 62%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 2rem
+    rgba(122, 17, 22, 0.3);
+}
+
+.thank-you-container .section-eyebrow {
+  margin-bottom: 1.25rem;
+}
+
+.thank-you-container h1 {
+  max-width: 15ch;
+  margin: 0 auto 1.75rem;
+
+  color: white;
+
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 525;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.thank-you-message {
+  max-width: 45rem;
+  margin: 0 auto;
+
+  color: var(--text-secondary);
+
+  font-size: var(--text-body-lg);
+  line-height: 1.75;
+}
+
+/* =========================================================
+   SUBMISSION STATUS
+   ========================================================= */
+
+.thank-you-status {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  margin-top: 3rem;
+
+  border-top: 0.0625rem solid var(--border-secondary);
+  border-left: 0.0625rem solid var(--border-secondary);
+
+  text-align: left;
+}
+
+.thank-you-status > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  padding: 1.25rem;
+
+  border-right: 0.0625rem solid var(--border-secondary);
+  border-bottom: 0.0625rem solid var(--border-secondary);
+
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.thank-you-status-label {
+  color: var(--text-muted);
+
+  font-size: var(--text-caption);
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.thank-you-status strong {
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   THANK YOU ACTIONS
+   ========================================================= */
+
+.thank-you-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.thank-you-contact {
+  margin: 2.5rem 0 0;
+
+  color: var(--text-muted);
+
+  font-size: var(--text-caption);
+}
+
+.thank-you-contact a {
+  color: var(--text-primary);
+
+  text-decoration: underline;
+  text-decoration-color: rgba(230, 115, 121, 0.55);
+  text-underline-offset: 0.25rem;
+}
+
+.thank-you-contact a:hover,
+.thank-you-contact a:focus-visible {
+  color: #e67379;
+}
+
+.thank-you-footer {
+  margin-top: auto;
+}
+
+/* =========================================================
+   THANK YOU MOBILE STYLES
+   ========================================================= */
+
+@media (max-width: 48rem) {
+  .thank-you-section {
+    min-height: 44rem;
+    padding:
+      8rem
+      1rem
+      4rem;
+  }
+
+  .thank-you-container {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .thank-you-icon {
+    width: 5rem;
+    height: 5rem;
+
+    font-size: 2.25rem;
+  }
+
+  .thank-you-status {
+    grid-template-columns: 1fr;
+  }
+
+  .thank-you-actions {
+    flex-direction: column;
+  }
+
+  .thank-you-actions .btn {
+    width: 100%;
+  }
+
+  .thank-you-section::before {
+    width: 28rem;
+    height: 28rem;
+  }
+
+  .thank-you-section::after {
+    width: 21rem;
+    height: 21rem;
+  }
+}
